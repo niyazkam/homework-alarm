@@ -2931,9 +2931,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0eeca39b51f2d1428ecba9bfe2cb31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _alarmController: {fileID: 1381503609}
-  _alarmSpriteRenderer: {fileID: 399618263}
-  _alarmSound: {fileID: 399618265}
+  _alarm: {fileID: 1381503609}
+  _spriteRenderer: {fileID: 399618263}
+  _sound: {fileID: 399618265}
 --- !u!82 &399618265
 AudioSource:
   m_ObjectHideFlags: 0

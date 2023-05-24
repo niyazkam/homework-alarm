@@ -1,16 +1,15 @@
 using System;
 using UnityEngine;
 
-public class AlarmController : MonoBehaviour
+public class Alarm : MonoBehaviour
 {
-    public event EventHandler OnHouseEntered;
-    public event EventHandler OnHouseExited;
+    public Action<bool> OnHouseEntered;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.parent.TryGetComponent<Thief>(out Thief thief)) 
         {
-            OnHouseEntered?.Invoke(this, EventArgs.Empty);
+            OnHouseEntered?.Invoke(true);
         }
     }
 
@@ -18,7 +17,7 @@ public class AlarmController : MonoBehaviour
     {
         if (collision.transform.parent.TryGetComponent<Thief>(out Thief thief))
         {
-            OnHouseExited?.Invoke(this, EventArgs.Empty);
+            OnHouseEntered?.Invoke(false);
         }
     }
 }
