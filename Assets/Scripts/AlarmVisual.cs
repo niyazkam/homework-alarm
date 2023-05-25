@@ -11,12 +11,12 @@ public class AlarmVisual : MonoBehaviour
 
     private void OnEnable()
     {
-        _alarm.OnHouseEntered += Manage;
+        _alarm.BrokeIntoHouse += Manage;
     }
 
     private void OnDisable()
     {
-        _alarm.OnHouseEntered -= Manage;
+        _alarm.BrokeIntoHouse -= Manage;
     }
 
     private void Start()
